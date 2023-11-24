@@ -1,7 +1,7 @@
 buildscript {
 	repositories {
 		maven { url = 'https://maven.minecraftforge.net' }
-		maven { url = 'https://repo.spongepowered.org/maven' }
+		maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
 		mavenCentral()
 	}
 	dependencies {
@@ -52,8 +52,8 @@ dependencies {
 	minecraft "net.minecraftforge:forge:${project.mcVersion}-${project.forgeVersion}"
 	annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-	implementation fg.deobf("curse.maven:iceberg-520110:4278508")
-	implementation fg.deobf("curse.maven:prism-638111:4238759")
+	implementation fg.deobf("curse.maven:iceberg-520110:4300529")
+	implementation fg.deobf("curse.maven:prism-lib-638111:3993293")
 }
 
 jar {

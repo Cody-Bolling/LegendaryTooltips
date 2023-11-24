@@ -33,6 +33,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.ForgeConfigSpec.BooleanValue;
 import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
+import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
@@ -237,7 +238,7 @@ public class LegendaryTooltipsConfig
 			case ALL:
 				return true;
 			case EQUIPMENT:
-				return itemStack.getItem().canBeDepleted();
+				return itemStack.getItem().canBeDepleted() || ForgeHooks.getDefaultCreatorModId(itemStack) == "tetra";
 		}
 	}
 
